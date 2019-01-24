@@ -10,6 +10,8 @@ class CategoryItem
     public $id;
     public $alias;
     public $name;
+    public $show;
+    public $order;
 
     /**
      * CategoryItem constructor.
