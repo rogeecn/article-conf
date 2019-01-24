@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Facade;
  * Class View
  *
  * @method  static string path($domain)
+ * @method  static string compilePath($domain)
+ * @method  static string domainPath($domain)
  *
  */
 class View extends Facade

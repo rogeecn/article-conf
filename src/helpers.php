@@ -33,6 +33,12 @@ if (!function_exists('domain_name')) {
     }
 }
 
+if (!function_exists('domain_view_path_name')) {
+    function domain_view_path_name($domain = null)
+    {
+        return (new \rogeecn\ArticleConf\Classes\View())->domainPath($domain);
+    }
+}
 
 if (!function_exists('domain_view_path')) {
     function domain_view_path($domain = null)

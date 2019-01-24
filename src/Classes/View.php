@@ -7,12 +7,15 @@ use Illuminate\Filesystem\Filesystem;
 
 class View
 {
-    public function path($customDomain = null)
+    public function domainPath($customDomain = null)
     {
         $domainArr = explode('.', domain_name($customDomain));
-        $pathName = implode('.', array_reverse($domainArr));
+        return implode('.', array_reverse($domainArr));
+    }
 
-        return resource_path('views/' . $pathName);
+    public function path($domain)
+    {
+        return resource_path('views/' . $this->domainPath($domain));
     }
 
     public function compilePath($domain)
