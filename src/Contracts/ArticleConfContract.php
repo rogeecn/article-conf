@@ -1,6 +1,6 @@
 <?php
 
-namespace Rogeecn\ArticleConf\Contracts;
+namespace rogeecn\ArticleConf\Contracts;
 
 Interface ArticleConfContract
 {

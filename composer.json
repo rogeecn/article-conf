@@ -15,13 +15,13 @@
   ],
   "autoload": {
     "psr-4": {
-      "Rogeecn\\ArticleConf\\": "src/"
+      "rogeecn\\ArticleConf\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Rogeecn\\ArticleConf\\ArticleConfServiceProvider"
+        "rogeecn\\ArticleConf\\ConfServiceProvider"
       ]
     }
   },

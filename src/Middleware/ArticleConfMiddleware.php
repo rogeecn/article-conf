@@ -1,6 +1,6 @@
 <?php
 
-namespace Rogeecn\ArticleConf\Middleware;
+namespace rogeecn\ArticleConf\Middleware;
 
 use Auth;
 use Closure;
