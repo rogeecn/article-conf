@@ -3,6 +3,7 @@
 namespace rogeecn\ArticleConf;
 
 use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
 use rogeecn\ArticleConf\Classes\Content;
 use rogeecn\ArticleConf\Classes\Domain;
@@ -50,5 +51,6 @@ class ConfServiceProvider extends ServiceProvider
         $this->app->singleton(\rogeecn\ArticleConf\Classes\Domain::class, function () {
             return new Domain();
         });
+
     }
 }
