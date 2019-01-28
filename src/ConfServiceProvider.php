@@ -3,7 +3,6 @@
 namespace rogeecn\ArticleConf;
 
 use Illuminate\Routing\Router;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
 use rogeecn\ArticleConf\Classes\Content;
 use rogeecn\ArticleConf\Classes\Domain;
@@ -19,9 +18,7 @@ class ConfServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        $this->publishes([__DIR__ . '/Config/category.php' => config_path('article/category.php'),], 'conf.category');
-        $this->publishes([__DIR__ . '/Config/domain.php' => config_path('article/domain.php'),], 'conf.domain');
-        $this->publishes([__DIR__ . '/Config/replace.image.php' => config_path('article/replace.php'),], 'conf.replace');
+        $this->publishes([__DIR__ . '/Config/config.php' => config_path('article/conf.php'),], 'conf');
     }
 
     /**
@@ -31,9 +28,7 @@ class ConfServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/Config/category.php', 'conf.category');
-        $this->mergeConfigFrom(__DIR__ . '/Config/replace.php', 'conf.replace');
-        $this->mergeConfigFrom(__DIR__ . '/Config/domain.php', 'conf.domain');
+        $this->mergeConfigFrom(__DIR__ . '/Config/config.php', 'conf');
 
 
         $this->app->singleton(\rogeecn\ArticleConf\Classes\Category::class, function () {
