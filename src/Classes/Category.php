@@ -24,7 +24,7 @@ class Category
      */
     public function fromID($id)
     {
-        $item = $this->instance->where('id', '=', $id);
+        $item = $this->instance->where('id', '=', $id)->first();
         throw_unless($item, CategoryNotExist::class, "category id : {$id} not exist");
 
         return new CategoryItem($item);
@@ -38,7 +38,7 @@ class Category
      */
     public function fromAlias($alias)
     {
-        $item = $this->instance->where('alias', '=', $alias);
+        $item = $this->instance->where('alias', '=', $alias)->first();
         throw_unless($item, CategoryNotExist::class, "category alias : {$alias} not exist");
 
         return new CategoryItem($item);

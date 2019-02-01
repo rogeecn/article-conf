@@ -3,14 +3,14 @@
 namespace rogeecn\ArticleConf\Facads;
 
 
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Facade;
+use rogeecn\ArticleConf\Classes\CategoryItem;
 
 /**
  * Class Category
  *
- * @method  static Collection fromID($id)
- * @method  static Collection fromAlias($alias)
+ * @method  static CategoryItem fromID($id)
+ * @method  static CategoryItem fromAlias($alias)
  *
  * @package rogeecn\ArticleConf\Facads
  */
