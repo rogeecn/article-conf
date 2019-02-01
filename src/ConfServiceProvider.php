@@ -46,6 +46,5 @@ class ConfServiceProvider extends ServiceProvider
         $this->app->singleton(\rogeecn\ArticleConf\Classes\Domain::class, function () {
             return new Domain();
         });
-
     }
 }

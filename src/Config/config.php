@@ -24,6 +24,19 @@ return [
         ['id' => 21, 'name' => '历史', 'alias' => 'lishi', 'show' => true, 'order' => 0],
         ['id' => 22, 'name' => '综合', 'alias' => 'zonghe', 'show' => true, 'order' => 0],
     ],
+    'replace'  => [
+        'image' => [
+            'loading' => "",
+            'domains' => [
+                'm.qpic.cn',
+                'a1.qpic.cn',
+                'mmbiz.qpic.cn',
+                'mmbiz.qlogo.cn',
+                'mmsns.qpic.cn',
+            ]
+        ]
+
+    ],
     'domain'   => [
         'a.article.local'  => ['a.article.local', 'm.a.article.local'],
         'b.article.local'  => ['b.article.local', 'm.b.article.local'],
@@ -36,24 +49,5 @@ return [
         'krshipin.com'     => ['www.krshipin.com', 'm.krshipin.com'],
         'kuranshipin.net'  => ['www.kuranshipin.net', 'm.kuranshipin.net'],
         'feed.ipaoyun.com' => ['feed.ipaoyun.com', 'm.feed.ipaoyun.com'],
-    ],
-    'replace'  => [
-        'image' => [
-            'loading' => "/images/loading.gif?v=" . env("APP_VERSION"),
-            'replace' => [
-                "&amp;"                  => "&",
-                'http://m.qpic.cn'       => config("conf.replace.image.loading") . '" data-src="http://m.qpic.cn',
-                'https://m.qpic.cn'      => config("conf.replace.image.loading") . '" data-src="http://m.qpic.cn',
-                'http://a1.qpic.cn'      => config("conf.replace.image.loading") . '" data-src="http://a1.qpic.cn',
-                'https://a1.qpic.cn'     => config("conf.replace.image.loading") . '" data-src="http://a1.qpic.cn',
-                'http://mmbiz.qpic.cn'   => config("conf.replace.image.loading") . '" data-src="http://mmbiz.qpic.cn',
-                'https://mmbiz.qpic.cn'  => config("conf.replace.image.loading") . '" data-src="http://mmbiz.qpic.cn',
-                'http://mmbiz.qlogo.cn'  => config("conf.replace.image.loading") . '" data-src="http://mmbiz.qlogo.cn',
-                'https://mmbiz.qlogo.cn' => config("conf.replace.image.loading") . '" data-src="http://mmbiz.qlogo.cn',
-                'http://mmsns.qpic.cn'   => config("conf.replace.image.loading") . '" data-src="http://mmsns.qpic.cn',
-                'https://mmsns.qpic.cn'  => config("conf.replace.image.loading") . '" data-src="http://mmsns.qpic.cn',
-            ]
-        ]
-
     ],
 ];
