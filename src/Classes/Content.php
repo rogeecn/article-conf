@@ -27,4 +27,11 @@ class Content
 
         return strtr($rawContent, $replacements);
     }
+
+    public function replaceWords($rawContent)
+    {
+        $replacements = [
+        ];
+        return strtr($rawContent, $replacements);
+    }
 }

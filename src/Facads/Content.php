@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Facade;
  * Class Content
  *
  * @method  static string replaceImage($rawContent)
+ * @method  static string replaceWords($rawContent)
  *
  */
 class Content extends Facade
