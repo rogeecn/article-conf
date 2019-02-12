@@ -61,10 +61,3 @@ if (!function_exists('domain_to_id')) {
         return (new \rogeecn\ArticleConf\Classes\Domain())->toID($domain);
     }
 }
-
-if (!function_exists('domain_assets_path')) {
-    function domain_assets_path($filename, $platform = 'pc')
-    {
-        return sprintf("/assets/%s/%s/%s", md5(domain_to_id()), $platform, $filename);
-    }
-}
