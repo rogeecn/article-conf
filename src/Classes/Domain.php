@@ -39,12 +39,12 @@ class Domain
     public function toMobile($customDomain = null)
     {
         $domainID = $this->toID($customDomain);
-        return array_get($this->deviceRepository, "{$domainID}.mobile");
+        return array_get($this->deviceRepository[$domainID], 'mobile');
     }
 
     public function toPc($customDomain = null)
     {
         $domainID = $this->toID($customDomain);
-        return array_get($this->deviceRepository, "{$domainID}.pc");
+        return array_get($this->deviceRepository[$domainID], 'pc');
     }
 }
