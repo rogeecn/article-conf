@@ -61,3 +61,17 @@ if (!function_exists('domain_to_id')) {
         return (new \rogeecn\ArticleConf\Classes\Domain())->toID($domain);
     }
 }
+
+if (!function_exists('domain_to_pc')) {
+    function domain_to_pc($domain = null)
+    {
+        return (new \rogeecn\ArticleConf\Classes\Domain())->toPc($domain);
+    }
+}
+
+if (!function_exists('domain_to_mobile')) {
+    function domain_to_mobile($domain = null)
+    {
+        return (new \rogeecn\ArticleConf\Classes\Domain())->toMobile($domain);
+    }
+}

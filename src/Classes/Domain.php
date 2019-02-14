@@ -7,13 +7,15 @@ use rogeecn\ArticleConf\Exceptions\ConfigureMissing;
 class Domain
 {
     private $repository;
+    private $deviceRepository;
 
     public function __construct()
     {
         $items = config('conf.domain');
         collect($items)->each(function ($item, $key) {
-            collect($item)->each(function ($subItem) use ($key) {
-                $this->repository[$subItem] = $key;
+            collect($item)->each(function ($domain, $device) use ($key) {
+                $this->repository[$domain] = $key;
+                $this->deviceRepository[$key][$device] = $domain;
             });
         });
     }
@@ -32,5 +34,17 @@ class Domain
         );
 
         return array_get($this->repository, $domainName, 'web');
+    }
+
+    public function toMobile($customDomain = null)
+    {
+        $domainID = $this->toID($customDomain);
+        return array_get($this->deviceRepository, "{$domainID}.mobile");
+    }
+
+    public function toPc($customDomain = null)
+    {
+        $domainID = $this->toID($customDomain);
+        return array_get($this->deviceRepository, "{$domainID}.pc");
     }
 }
