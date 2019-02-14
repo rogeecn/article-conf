@@ -1,6 +1,6 @@
 {
-  "name": "rogeecn/ArticleConf",
-  "description": "Laravel package to custom site util configures",
+  "name": "rogeecn/article-conf",
+  "description": "to custom site util configures",
   "license": "MIT",
   "type": "library",
   "require": {
