@@ -3,11 +3,11 @@
 namespace rogeecn\ArticleConf;
 
 use Illuminate\Routing\Router;
-use Illuminate\Support\ServiceProvider;
+use rogeecn\ArticleConf\Classes\Category;
 use rogeecn\ArticleConf\Classes\Content;
 use rogeecn\ArticleConf\Classes\Domain;
 use rogeecn\ArticleConf\Classes\View;
-use rogeecn\ArticleConf\Classes\Category;
+use Illuminate\Support\ServiceProvider;
 
 class ConfServiceProvider extends ServiceProvider
 {
